@@ -1,3 +1,7 @@
+# ARCHIVED
+
+This project is no longer in development. It is stored here for example and archive purposes.
+
 # AEM Content Importer - Build
 
 Maven Builds:
