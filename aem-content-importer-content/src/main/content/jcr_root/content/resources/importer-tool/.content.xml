@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/etc/designs/default"
+        jcr:description="AEM Importer Tool"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="AEM Importer Tool"
+        jcr:uuid="93b5cccd-a373-40c1-a69f-570146b62804"
+        sling:resourceType="/apps/aem-importer/components/page">
+        <upload-content
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="aem-importer/components/upload-content"/>
+    </jcr:content>
+</jcr:root>

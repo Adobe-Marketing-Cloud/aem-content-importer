@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/apps/aem-importer/components"/>
+    <filter root="/apps/aem-importer/resources"/>
+    <filter root="/apps/aem-importer/config"/>
+    <filter root="/etc/workflow/models/aem-content-importer"/>
+    <filter root="/etc/workflow/launcher/config/aem-content-importer"/>
+    <filter root="/etc/clientlibs/aem-content-importer"/>
+    <filter root="/content/resources/importer-tool"/>
+</workspaceFilter>

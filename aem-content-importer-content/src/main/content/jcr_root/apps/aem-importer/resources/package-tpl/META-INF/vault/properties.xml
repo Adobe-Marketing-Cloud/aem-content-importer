@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+    <comment>pando-test Package</comment>
+    <entry key="createdBy">colligno</entry>
+    <entry key="name">pando-test-content</entry>
+    <entry key="created">2014-10-28T12:51:38.332+0100</entry>
+    <entry key="groupId">com.adobe.pando</entry>
+    <entry key="version">0.1.0-SNAPSHOT</entry>
+    <entry key="requiresRoot">false</entry>
+    <entry key="group">adobe-pando</entry>
+    <entry key="description">The Unified Help Project</entry>
+    <entry key="artifactId">pando-test-content</entry>
+    <entry key="path">/etc/packages/adobe-pando/pando-test-content.zip</entry>
+</properties>

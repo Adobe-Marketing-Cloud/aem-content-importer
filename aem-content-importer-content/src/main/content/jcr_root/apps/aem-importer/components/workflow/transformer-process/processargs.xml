@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Panel"
+    title="Arguments">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <arguments
+            jcr:primaryType="cq:Widget"
+            collapsed="{Boolean}false"
+            collapsible="{Boolean}false"
+            title="Process Arguments"
+            xtype="dialogfieldset">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <transformer
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Transformer"
+                    name="./metaData/transformer"
+                    options="$PATH.transformers.html"
+                    type="select"
+                    xtype="selection"/>
+                <src
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Src"
+                    name="./metaData/src"
+                    rootPath="/"
+                    xtype="pathfield"/>
+                <target
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Target"
+                    name="./metaData/target"
+                    rootPath="/"
+                    xtype="pathfield"/>
+                <masterFile
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Master File"
+                    name="./metaData/masterFile"
+                    xtype="textfield"/>
+                <customProperties
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="One property for row with syntax: property_name=property_value"
+                    fieldLabel="Custom Properties"
+                    name="./metaData/customProperties"
+                    xtype="textarea"/>
+            </items>
+        </arguments>
+    </items>
+</jcr:root>

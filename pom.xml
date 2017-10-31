@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.adobe.aem.importer</groupId>
+    <artifactId>aem-content-importer</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>Adobe AEM Content Importer Reactor</name>
+    <description>The Unified Help Project</description>
+
+    <inceptionYear>2014</inceptionYear>
+
+    <properties>
+        <project.folder>aem-importer</project.folder>
+        <crx.host>localhost</crx.host>
+        <crx.port>4502</crx.port>
+        <crx.username>admin</crx.username>
+        <crx.password>admin</crx.password>
+        <publish.crx.host>localhost</publish.crx.host>
+        <publish.crx.port>4503</publish.crx.port>
+        <publish.crx.username>admin</publish.crx.username>
+        <publish.crx.password>admin</publish.crx.password>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    </properties>
+
+    <modules>
+        <module>aem-content-importer-bundle</module>
+        <module>aem-content-importer-content</module>
+    </modules>
+
+    <profiles>
+        <profile>
+            <id>cloud-deploy</id>
+            <properties>
+                <project.folder>aem-importer</project.folder>
+                <crx.host>importer.corp.adobe.com</crx.host>
+                <crx.port>4502</crx.port>
+                <crx.username>admin</crx.username>
+                <crx.password>admin</crx.password>
+                <publish.crx.host>importer.corp.adobe.com</publish.crx.host>
+                <publish.crx.port>4503</publish.crx.port>
+                <publish.crx.username>admin</publish.crx.username>
+                <publish.crx.password>admin</publish.crx.password>
+                <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+                <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+            </properties>
+        </profile>
+    </profiles>
+</project>

@@ -1,0 +1,134 @@
+<!--
+Copyright (c) 2014 Adobe Systems Incorporated. All rights reserved.
+Licensed under the Apache License 2.0.
+http://www.apache.org/licenses/LICENSE-2.0
+ -->
+<output
+    data-sly-use.clientLib="${'/libs/granite/sightly/templates/clientlib.html'}"
+    data-sly-call="${clientLib.js @ categories='cq.jquery'}"
+    data-sly-unwrap></output>
+
+<script type="text/javascript">
+    if (typeof jQuery === "undefined") {
+        var div = document.createElement("div");
+        div.innerHTML = "jQuery library is a mandatory to be added in page to work this component";
+        document.body.appendChild(div);
+    }
+</script>
+
+<div>
+
+    <form id="uploadContent" style="" action="${resource.path}">
+
+        <div class="title section cq-element-par_47title">
+            <h3>Zip upload section</h3>
+            <label for="fileselect">File to upload data:</label>
+            <input type="file" id="fileselect" name="fileselect"/>
+            <div id="filedrag">or drop files here</div>
+            <div style="clear: both"></div>
+            <button id="clearFile" type="button">Clear</button>
+            <div id="messages" style="display: none;"></div>
+        </div>
+        <div class="title section cq-element-par_47title">
+            <h3>Set some params manually</h3>
+
+            <div class="form_leftcol">
+                <div class="form_leftcollabel">
+                    <label for="src">Src</label>
+                </div>
+                <div class="form_leftcolmark"></div>
+            </div>
+            <div id="email_rightcol" class="form_rightcol">
+                <div id="email_0_wrapper" class="form_rightcol_wrapper">
+                    <input  class="form_field form_field_text"
+                            id="src"
+                            name="src"
+                            placeholder="Path where pick up files to transform"
+                            autocomplete="off"
+                            type="text"/>
+                </div>
+            </div>
+            <div class="form_leftcol">
+                <div class="form_leftcollabel">
+                    <label for="transformer">Transformer to apply</label>
+                </div>
+                <div class="form_leftcolmark"></div>
+            </div>
+            <div id="email_rightcol" class="form_rightcol">
+                <div id="email_0_wrapper" class="form_rightcol_wrapper">
+
+                    <select data-sly-use.trans="com.adobe.aem.importer.ui.TransformerBsn"
+                            data-sly-list.list="${trans.list}"
+                            class="form_field form_field_select"
+                            name="transformer"
+                            id="transformer">
+                        <option value="${list.name}">${list.simpleName}</option>
+                    </select>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="form_leftcol">
+            <div class="form_leftcollabel">
+                <label for="masterFile">Master file</label>
+            </div>
+            <div class="form_leftcolmark"></div>
+        </div>
+        <div id="email_rightcol" class="form_rightcol">
+            <div id="email_0_wrapper" class="form_rightcol_wrapper">
+
+                <input  class="form_field form_field_text"
+                        name="masterFile"
+                        id="masterFile"
+                        placeholder="..."
+                        autocomplete="off"
+                        type="text"/>
+            </div>
+        </div>
+
+        <div class="form_leftcol">
+            <div class="form_leftcollabel">
+                <label
+                    for="target">Target of results</label>
+            </div>
+            <div class="form_leftcolmark"></div>
+        </div>
+        <div id="email_rightcol" class="form_rightcol">
+            <div id="email_0_wrapper" class="form_rightcol_wrapper">
+                <input
+                    class="form_field form_field_text" name="target" id="target"
+                    placeholder="Path where store the result" autocomplete="off"
+                    type="text"/>
+            </div>
+        </div>
+
+        <div class="form_leftcol">
+            <div class="form_leftcollabel">
+                <label for=customProps>Custom properties</label>
+            </div>
+            <div class="form_leftcolmark"></div>
+        </div>
+        <div id="email_rightcol" class="form_rightcol">
+            <div id="email_0_wrapper" class="form_rightcol_wrapper">
+					<textarea rows="3" class="form_field form_field_textarea"
+                              name="customProps" id="customProps" placeholder="Custom properties"></textarea>
+            </div>
+        </div>
+        <div id="error" style="display: none"></div>
+        <div id="success" style="display: none"></div>
+        <input id="execute" type="submit" class="button"
+               style="margin-top: 15px" value="Execute"/>
+        <progress id="progress" min="0" max="100" value="0"
+                  style="display: none;">0
+        </progress>
+    </form>
+</div>
+<output
+    data-sly-use.clientLib="${'/libs/granite/sightly/templates/clientlib.html'}"
+    data-sly-call="${clientLib.css @ categories='aem-content-importer'}"
+    data-sly-unwrap></output>
+<output
+    data-sly-use.clientLib="${'/libs/granite/sightly/templates/clientlib.html'}"
+    data-sly-call="${clientLib.js @ categories='aem-content-importer'}"
+    data-sly-unwrap></output>
